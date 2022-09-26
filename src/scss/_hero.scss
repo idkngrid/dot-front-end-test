@@ -1,15 +1,52 @@
+@use "./breakpoints" as breakpoint;
 @use "./variables" as v;
 
 .hero {
     background: url('../../assets/header-360.png') no-repeat center / cover;
 
+    @include breakpoint.breakpoint-up(medium) {
+        background: url('../../assets/header-1024.png') no-repeat center / cover;
+    }
+
+    @include breakpoint.breakpoint-up(large) {
+        background: url('../../assets/header-1920.png') no-repeat center / cover;
+    }
+
+    &__content {
+        padding-top: 53px;
+        padding-bottom: 195px;
+
+        @include breakpoint.breakpoint-up(medium) {
+            padding-top: 128px;
+            padding-bottom: 83px;
+        }
+    }
+
+    &__logo {
+        width: 138px;
+        padding-bottom: 103px;
+
+        @include breakpoint.breakpoint-up(medium) {
+            width: 252px;
+        }
+    }
+
     &__headline {
-        font-family: 'Raleway', sans-serif;;
         font-size: v.$font-lg;
+        font-weight: bold;
+        padding-bottom: 3px;
+
+        @include breakpoint.breakpoint-up(large) {
+            font-size: v.$font-xlg;
+        }
     }
 
     &__text {
         font-size: v.$font-small;
+        
+        @include breakpoint.breakpoint-up(large) {
+            font-size: 30px;
+        }
     }
 }
 
