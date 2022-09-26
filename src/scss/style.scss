@@ -1,2 +1,6 @@
-@import "variables";
-@import "globals";
+@forward "variables";
+@forward "breakpoints";
+
+@forward "reset";
+@forward "globals";
+@forward "hero";

@@ -1,0 +1,15 @@
+@use "./variables" as v;
+
+.hero {
+    background: url('../../assets/header-360.png') no-repeat center / cover;
+
+    &__headline {
+        font-family: 'Raleway', sans-serif;;
+        font-size: v.$font-lg;
+    }
+
+    &__text {
+        font-size: v.$font-small;
+    }
+}
+

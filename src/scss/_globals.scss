@@ -1,0 +1,12 @@
+@use "./variables" as v;
+
+body {
+    font-family: ral;
+    color: v.$white;
+}
+
+.container {
+    max-width: 64rem;
+    padding: 0 1.25rem;
+    margin: 0 auto;
+}
