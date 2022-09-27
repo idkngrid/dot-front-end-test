@@ -3,6 +3,7 @@
 
 .dropdown {
     background-color: v.$blue;
+    position: relative;
 
     &__headline {
         margin-bottom: 2rem;
@@ -23,6 +24,7 @@
         flex-direction: column;
         align-items: center;
         gap: 2rem;
+        padding: 0 1.5rem;
 
         @include breakpoint.breakpoint-up(large) {
             flex-direction: row;
@@ -44,7 +46,8 @@
         background-color: v.$white;
 
         > img {
-            position: relative;
+            display: block;
+            width: 100%;
             top: 50px;
             left: 63px;
         }
@@ -67,6 +70,19 @@
         font-size: 1.125rem;
         line-height: 1.2;
         margin-bottom: 2rem;
+    }
+
+    &__icon {
+        position: absolute;
+        width: 144px;
+        bottom: -15px;
+        right: -70px;
+
+        @include breakpoint.breakpoint-up(large) {
+            width: 335px;
+            bottom: -40px;
+            right: -180px;
+        }
     }
 
 }

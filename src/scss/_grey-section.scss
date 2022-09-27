@@ -8,6 +8,10 @@
         margin-bottom: 4.1875rem;
     }
 
+    &__container {
+        position: relative;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -25,10 +29,15 @@
         @include breakpoint.breakpoint-up (large) {
             order: 0;
         }
+
+        img {
+            display: block;
+            width: 100%;
+        }
     }
 
     &__text {
-        max-width: 25rem;
+        max-width: 29rem;
         font-size: 20px;
 
         @include breakpoint.breakpoint-up (large) {
@@ -37,17 +46,14 @@
     }
 
     &__icon--blue {
-        // position: absolute;
-        // bottom: -1145px;
-        // left: 745px;
-        position: relative;
-        left: 640px;
-        bottom: -45px;
+        position: absolute;
+        right: 340px;
+        top: -40px;
     }
 
     &__icon--yellow {
-        position: relative;
-        left: 990px;
-        bottom: 50px;
+        position: absolute;
+        bottom: -30px;
+        right: -15px;
     }
 }

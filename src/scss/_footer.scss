@@ -1,0 +1,7 @@
+@use "./breakpoints" as breakpoint;
+@use "./variables" as v;
+
+.footer {
+    background-color: v.$purple;
+    padding: 3.5rem 0;
+}
