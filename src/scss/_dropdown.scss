@@ -1,0 +1,72 @@
+@use "./breakpoints" as breakpoint;
+@use "./variables" as v;
+
+.dropdown {
+    background-color: v.$blue;
+
+    &__headline {
+        margin-bottom: 2rem;
+    }
+
+    &__text--white {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+
+        @include breakpoint.breakpoint-up(large) {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        @include breakpoint.breakpoint-up(large) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__card {
+        width: 302px;
+        height: 274px;
+        background-color: v.$purple;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__card-image {
+        width: 302px;
+        min-height: 234px;
+        background-color: v.$white;
+
+        > img {
+            position: relative;
+            top: 50px;
+            left: 63px;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        width: 48px;
+        height: 54px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__card--open {
+        background-color: v.$yellow;
+    }
+
+    &__text--purple {
+        font-size: 1.125rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
+}

@@ -1,0 +1,13 @@
+@use "./breakpoints" as breakpoint;
+@use "./variables" as v;
+
+.circle {
+
+    &__text {
+        color: v.$lightGrey;
+    } 
+
+    &__image {
+        
+    }
+}

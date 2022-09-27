@@ -1,3 +1,4 @@
+@use "./breakpoints" as breakpoint;
 @use "./variables" as v;
 
 body {
@@ -6,11 +7,62 @@ body {
 }
 
 .container {
-    max-width: 64rem;
-    padding: 0 1.25rem;
+    max-width: 70rem;
     margin: 0 auto;
+
+    &--pall { 
+        padding: 4.375rem 1.5rem; 
+        @include breakpoint.breakpoint-up(large) { padding: 2.1875rem 1.5rem } 
+    }
+}
+
+
+// Typography
+.headline {
+    font-weight: bold;
+}
+
+.headline--size-1 {
+    font-size: v.$font-lg;
+
+    @include breakpoint.breakpoint-up(medium) { font-size: v.$font-xlg; }
+    @include breakpoint.breakpoint-up(large) { font-size: v.$font-xxlg; }
+}
+
+.headline--size-2 {
+    font-size: v.$font-big;
+
+    @include breakpoint.breakpoint-up(large) { font-size: v.$font-lg; }
+}
+
+.headline--yellow {
+    color: v.$yellow;
+}
+
+.headline--blue {
+    color: v.$blue;
 }
 
 .text-center {
     text-align: center;
+}
+
+
+// Visibitily
+.hide-for-mobile {
+    // hide for tablet and mobile
+    @include breakpoint.breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    // hide for desktop viewport widths
+    @include breakpoint.breakpoint-up(large) {
+        display: none;
+    }
+}
+
+.hide-for-all {
+    display: none;
 }

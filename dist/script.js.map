@@ -1,1 +1,1 @@
-{"version":3,"file":"script.js","names":[],"sources":[],"mappings":""}
+{"version":3,"file":"script.js","names":["dropdownButtonDown","document","querySelector","addEventListener","classList","toggle"],"sources":["script.js"],"mappings":"AAAA,MAAMA,mBAAqBC,SAASC,cAAc,uBAElDF,mBAAmBG,iBAAiB,SAAS,KACpBF,SAASC,cAAc,2BAE/BE,UAAUC,OAAO,eAAe"}

@@ -1,2 +1,2 @@
-
+const dropdownButtonDown=document.querySelector("#dropdownButtonDown");dropdownButtonDown.addEventListener("click",(()=>{document.querySelector(".dropdown__text--purple").classList.toggle("hide-for-all")}));
 //# sourceMappingURL=script.js.map
