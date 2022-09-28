@@ -1,2 +1,2 @@
-
+const circleButton=document.querySelector(".circle__text");circleButton.addEventListener("click",(e=>{const t=e.target,o=document.querySelector("#circleText");t.classList.contains("yellowArrow")?(circleButton.classList.toggle("open"),circleButton.style.backgroundColor="#FFCC33",o.innerText="Este texto é referente ao botão que está sobre a flecha amarela!"):t.classList.contains("greyArrow")?(circleButton.style.backgroundColor="#707070",o.innerText="Este texto é referente ao botão que está sobre a flecha cinza!"):t.classList.contains("redArrow")&&(circleButton.style.backgroundColor="#FF3737",o.innerText="Este texto é referente ao botão que está sobre a flecha vermelha!")}));
 //# sourceMappingURL=script.js.map

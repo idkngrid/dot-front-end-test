@@ -3,22 +3,88 @@
 
 .circle {
 
-    &__content {
+    p {
+        font-size: 18px;
+        line-height: 1.3;
+        padding: 2rem 0;
+        color: v.$lightGrey;
+    }
+
+    &__image {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 4rem;
-        padding: 2rem 0;
-        color: v.$lightGrey;
 
         img {
             display: block;
-            width: 100%;
+            width: 90%;
 
             @include breakpoint.breakpoint-up(medium) {
                 width: 500px;
             }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        top: 15px;
+        bottom: 0;
+        margin: auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: v.$yellow;
+
+        @include breakpoint.breakpoint-down(xsmall) {
+            width: 200px;
+            height: 200px;
+        }
+
+        > span {
+            position: absolute;
+            padding: 0 3rem;
+            top: 130px;
+            text-align: center;
+
+            @include breakpoint.breakpoint-down(xsmall) {
+                top: 60px;
+            }
+        }
+
+        :nth-child(2) {
+            top: -40px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        :nth-child(3) {
+            bottom: -35px;
+            left: -63px;
+        }
+
+        :nth-child(4) {
+            bottom: -35px;
+            right: -63px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: v.$blue;
+        border-radius: 50%;
+        cursor: pointer;
+
+        svg {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 15px;
         }
     }
 }
