@@ -1,7 +1,7 @@
 @use "./breakpoints" as breakpoint;
 @use "./variables" as v;
 
-.list {
+.purple-section {
     background-color: v.$purple;
     position: relative;
 

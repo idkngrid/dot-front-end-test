@@ -22,20 +22,20 @@
     &__cards {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 2rem;
         padding: 0 1.5rem;
 
         @include breakpoint.breakpoint-up(large) {
             flex-direction: row;
             justify-content: space-between;
+            align-items: flex-start;
         }
     }
 
     &__card {
         position: relative;
         width: 302px;
-        // overflow: hidden;
     }
 
     &__card-image {
