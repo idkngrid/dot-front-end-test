@@ -1,6 +1,10 @@
 @use "./breakpoints" as breakpoint;
 @use "./variables" as v;
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     color: v.$white;
@@ -13,7 +17,7 @@ body {
 
     &--pall { 
         padding: 4.375rem 1.5rem; 
-        @include breakpoint.breakpoint-up(large) { padding: 2.1875rem 1.5rem } 
+        @include breakpoint.breakpoint-up(large) { padding: 4rem 1.5rem } 
     }
 }
 

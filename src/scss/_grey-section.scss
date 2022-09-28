@@ -46,14 +46,26 @@
     }
 
     &__icon--blue {
-        position: absolute;
-        right: 340px;
-        top: -40px;
+        display: none;
+        
+
+        @include breakpoint.breakpoint-up (large) {
+            display: block;
+            position: absolute;
+            right: 340px;
+            top: -40px;
+        }
     }
 
     &__icon--yellow {
-        position: absolute;
-        bottom: -30px;
-        right: -15px;
+        display: none;
+        
+
+        @include breakpoint.breakpoint-up (large) {
+            display: block;
+            position: absolute;
+            bottom: -30px;
+            right: -15px;
+        }
     }
 }
