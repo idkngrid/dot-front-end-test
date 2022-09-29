@@ -136,24 +136,21 @@
             <div class="circle__image">
                 <img src="assets/interactive.svg" alt="">
                 <div class="circle__text">
-                    <span id="circleText">Este texto é referente ao botão que está sobre a flecha amarela!</span>
-                    <div class="circle__icon yellowArrow">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20.69" height="21.688" viewBox="0 0 20.69 21.688" class="yellowArrow">
-                            <path class="yellowArrow" id="Caminho_187624" data-name="Caminho 187624" d="M23.758-21.581v3.726H15.509v8.981H11.317v-8.981H3.068v-3.726h8.249v-8.981h4.191v8.981Z" transform="translate(-3.068 30.562)" fill="#fff"/>
-                        </svg> -->
-                        <span class="yellowArrow arrow1"></span>
-                        <span class="yellowArrow arrow2"></span>
-                    </div>
-                    <div class="circle__icon redArrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20.69" height="21.688" viewBox="0 0 20.69 21.688" class="redArrow">
-                            <path class="redArrow" id="Caminho_187624" data-name="Caminho 187624" d="M23.758-21.581v3.726H15.509v8.981H11.317v-8.981H3.068v-3.726h8.249v-8.981h4.191v8.981Z" transform="translate(-3.068 30.562)" fill="#fff"/>
-                        </svg>
-                    </div>
-                    <div class="circle__icon greyArrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20.69" height="21.688" viewBox="0 0 20.69 21.688" class="greyArrow">
-                            <path class="greyArrow" id="Caminho_187624" data-name="Caminho 187624" d="M23.758-21.581v3.726H15.509v8.981H11.317v-8.981H3.068v-3.726h8.249v-8.981h4.191v8.981Z" transform="translate(-3.068 30.562)" fill="#fff"/>
-                        </svg>
-                    </div>
+                    <span class="circle__text__item circle__text__item--yellow circle__text__item--active" id="circle-yellow">Este texto é referente ao botão que está sobre a flecha amarela!</span>
+                    <span class="circle__text__item circle__text__item--red" id="circle-red">Este texto é referente ao botão que está sobre a flecha vermelho!</span>
+                    <span class="circle__text__item circle__text__item--grey" id="circle-grey">Este texto é referente ao botão que está sobre a flecha cinza!</span>
+                    <button type="button" title="Mostrar texto da flecha amarela" class="circle__icon circle__icon--active" data-text="circle-yellow">
+                        <span class="circle__icon__line circle__icon__line--hor"></span>
+                        <span class="circle__icon__line circle__icon__line--ver"></span>
+                    </button>
+                    <button type="button" title="Mostrar texto da flecha vermelha" class="circle__icon" data-text="circle-red">
+                        <span class="circle__icon__line circle__icon__line--hor"></span>
+                        <span class="circle__icon__line circle__icon__line--ver"></span>
+                    </button>
+                    <button type="button" title="Mostrar texto da flecha cinza" class="circle__icon" data-text="circle-grey">
+                        <span class="circle__icon__line circle__icon__line--hor"></span>
+                        <span class="circle__icon__line circle__icon__line--ver"></span>
+                    </button>
                 </div>
             </div>
         </div>

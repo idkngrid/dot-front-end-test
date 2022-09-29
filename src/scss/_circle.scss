@@ -2,7 +2,6 @@
 @use "./variables" as v;
 
 .circle {
-
     p {
         font-size: 18px;
         line-height: 1.3;
@@ -15,6 +14,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: max-content;
+        margin: auto;
 
         img {
             display: block;
@@ -27,87 +28,102 @@
     }
 
     &__text {
-        position: absolute;
-        top: 15px;
-        bottom: 0;
-        margin: auto;
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        background-color: v.$yellow;
-
-        @include breakpoint.breakpoint-down(xsmall) {
-            width: 200px;
-            height: 200px;
-        }
-
-        > span {
+        &__item {
             position: absolute;
-            padding: 0 3rem;
-            top: 130px;
             text-align: center;
 
-            @include breakpoint.breakpoint-down(xsmall) {
-                top: 60px;
-            }
-        }
+            width: 46%;
+            height: 43%;
+            border-radius: 50rem;
+            padding: 2rem;
 
-        :nth-child(2) {
-            top: -40px;
+            display: none;
+            place-content: center;
+
             left: 0;
             right: 0;
+            top: 50%;
+            transform: translateY(-47%);
             margin: auto;
-        }
 
-        :nth-child(3) {
-            bottom: -35px;
-            left: -63px;
-        }
+            @include breakpoint.breakpoint-down(small) {
+                width: 42%;
+            }
 
-        :nth-child(4) {
-            bottom: -35px;
-            right: -63px;
+
+            &--active {
+                display: grid;
+            }
+
+            &--yellow {
+                background: v.$yellow;
+                color: v.$darkGrey;
+            }
+
+            &--red {
+                background: v.$red;
+            }
+
+            &--grey {
+                background: v.$lightGrey;
+            }
         }
     }
 
     &__icon {
-        position: absolute;
+        background: v.$blue;
         width: 40px;
         height: 40px;
-        background-color: v.$blue;
-        border-radius: 50%;
+        margin: auto;
+        border-radius: 100%;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
         cursor: pointer;
 
-        > span {
+        &--active {
+            background: v.$purple;
+        }
+
+        &--active &__line--ver {
+            display: none;
+        }
+
+        &:nth-of-type(1) {
+            top: 15%;
+            left: 0;
+            right: 0;
+        }
+
+        &:nth-of-type(2) {
+            left: 8.75%;
+            top: 75.65%;
+        }
+
+        &:nth-of-type(3) {
+            right: 8%;
+            top: 75.75%;
+        }
+
+        &__line {
+            display: block;
             position: absolute;
-            width: 18px;
-            height: 3px;
-            background-color: #000000;
-        }
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
 
-        .arrow1 {
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
+            &--hor {
+                width: 20px;
+                height: 3px;
+                margin: 0 auto;
+            }
 
-        .arrow2 {
-            top: 19px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            transform: rotate(90deg);
-        }
-
-        svg {
-            position: absolute;
-            top: 10px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 15px;
-        }
+            &--ver {
+                width: 3px;
+                height: 20px;
+                margin: auto 0;
+            }
+        }        
     }
 }

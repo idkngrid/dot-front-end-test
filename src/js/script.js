@@ -1,18 +1,42 @@
-const circleButton = document.querySelector('.circle__text');
-
-circleButton.addEventListener('click', (e) => {
-    const clickedTarget = e.target;
-    const circleText = document.querySelector('#circleText');
-
-    if(clickedTarget.classList.contains("yellowArrow")) {
-        circleButton.classList.toggle('open');
-        circleButton.style.backgroundColor = "#FFCC33";
-        circleText.innerText = "Este texto é referente ao botão que está sobre a flecha amarela!";
-    } else if (clickedTarget.classList.contains("greyArrow")) {
-        circleButton.style.backgroundColor = "#707070";
-        circleText.innerText = "Este texto é referente ao botão que está sobre a flecha cinza!";
-    } else if (clickedTarget.classList.contains("redArrow")) {
-        circleButton.style.backgroundColor = "#FF3737";
-        circleText.innerText = "Este texto é referente ao botão que está sobre a flecha vermelha!";
-    }
-})
+function closeCard() {
+    const details = document.querySelectorAll('details');
+  
+    details.forEach((detail) => {
+      detail.addEventListener('click', () => {
+        details.forEach((item) => {
+          if (item !== detail) {
+            item.removeAttribute('open');
+          }
+        });
+      });
+    });
+  }
+  
+  function toggleCircle() {
+    const buttons = document.querySelectorAll('.circle__icon');
+    const text = document.querySelectorAll('.circle__text__item');
+  
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        buttons.forEach((item) => {
+          if (item !== button) {
+            item.classList.remove('circle__icon--active');
+          }
+        });
+  
+        button.classList.toggle('circle__icon--active');
+  
+        text.forEach((item) => {
+          if (item.id == button.getAttribute('data-text')) {
+            item.classList.add('circle__text__item--active');
+          } else {
+            item.classList.remove('circle__text__item--active');
+          }
+        });
+      });
+    });
+  }
+  
+  toggleCircle();
+  closeCard();
+  
